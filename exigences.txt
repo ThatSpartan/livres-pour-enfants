@@ -1,0 +1,16 @@
+U3A3_Livres.fla
+U3A3_Livres.swf
+U3A3_Livres.as
+
+instruction include
+
+demander le titre en donnant son numéro de référence
+
+utiliser la méthode de recherche binaire pour trouver le livre
+trouvé - afficher le tittre
+non trouvé - afficher non trouvé
+
+interface :
+Inscrire le numéro de référence : txtReference
+btnTitreDuLivre
+txtAffiche
