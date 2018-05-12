@@ -1,19 +1,15 @@
-def Search(arr,val):
+def BinarySearch(arr,left,right,val):
 
-    if len(arr)==0 or (len(arr)==1 and arr[0]!=val):
+    if left > right:
         return False
 
-    print('Full Array : ' + str(arr))
+    mid = (left + right) // 2
 
-    mid=arr[len(arr)//2]
+    if arr[mid] == val:
+        return True
+    
+    if val < arr[mid]:
+        return BinarySearch(arr,left,mid-1,val)
+    else:
+        BinarySearch(arr,mid+1,right,val)
 
-    print('Mid Point : ' + str(mid))
-
-    if val==mid:    return True
-    if val<mid:     return Search(arr[:len(arr)//2],val)
-    if val>mid:     return Search(arr[len(arr)//2+1:],val)
-
-a=[1,2,3,4,5,6,7,8,9]
-
-print(Search(a,4))
-print(Search(a,8))
