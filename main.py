@@ -1,5 +1,12 @@
 def BinarySearch(arr, val):
 
+    """ Binary Search Function
+    
+    Returns:
+        String -- Should return the name of the book searched
+    """
+
+
     if len(arr) == 0 or (len(arr) == 1 and arr[0][0] != val):
         return False
 
