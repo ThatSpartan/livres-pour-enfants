@@ -22,10 +22,24 @@ package {
             // donc valeur recherché n'existe pas
             if (arr.length == 0 || (arr.length == 1 && arr[0][0] != val))
             {
-                return false
+                return false;
             }
 
+            var nombreElements:int = arr.length / 2;
+            var valMilieu:int = arr[nombreElements][0];
 
+            if (val == valMilieu)
+            {
+                return arr[nombreElements][1];
+            }
+            else if (val < valMilieu)   // valeur est plus petite
+            {
+                return rechercheBinaire(arr.slice(0, nombreElements), val);
+            }
+            else if (val > valMilieu)   // valeur est plus grande
+            {
+                return rechercheBinaire(arr.slice(nombreElements+1, -1), val);
+            }
 
         }
 
